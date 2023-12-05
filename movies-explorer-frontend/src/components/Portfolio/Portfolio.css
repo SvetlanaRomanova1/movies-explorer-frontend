@@ -1,0 +1,109 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin: 97px 70px 121px 70px;
+}
+
+.portfolio__text {
+    color: #A0A0A0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 50px 0;
+}
+
+.portfolio__list-project {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+}
+
+.portfolio__item-project {
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    transition: opacity 0.4s ease-out;
+    cursor: pointer;
+}
+
+.portfolio__item-project:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background: #E8E8E8;
+    bottom: -20px;
+}
+
+.portfolio__item-project:last-child:before {
+    width: 0;
+    height: 0;
+}
+
+.portfolio__item-project:hover {
+    opacity: 0.5;
+}
+
+.portfolio__link-project {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -1.2px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.portfolio__link-project:after {
+    background-image: url("../../image/arrow-icon.svg");
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        margin: 84px 50px 121px 50px;
+    }
+    .portfolio__link-project {
+        font-size: 28px;
+    }
+    .portfolio__link-project:after {
+        top: 57%;
+        right: 0;
+    }
+}
+
+@media (max-width: 515px) {
+    .portfolio {
+        margin: 70px 14px 70px 14px;
+    }
+    .portfolio__text {
+        font-size: 14px;
+        padding: 0 0 40px 0;
+    }
+    .portfolio__link-project {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.72px;
+    }
+    .portfolio__link-project:after {
+        width: 21px;
+        height: 11px;
+        top: 52%;
+        right: -6px;
+    }
+}
