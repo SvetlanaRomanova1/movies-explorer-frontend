@@ -39,4 +39,16 @@
     opacity: 0.5;
 }
 
+@media (max-width: 768px) {
+    .movies-card__list {
+        grid-template-columns: repeat(auto-fit, 21rem);
+        grid-gap: 88px 30px;
+    }
+    .movies-card__wrapper_button {
+        margin: 104px 0 0 0;
+    }
+    .movies__card {
+        margin-bottom: 109px;
+    }
+}
 

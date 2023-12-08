@@ -46,3 +46,12 @@
 .filter__checkbox:checked ~ .filter__track .filter__thumb {
     transform: translateX(20px) translateY(-50%);
 }
+
+@media (max-width: 768px) {
+    .filter__track {
+        margin: 0;
+    }
+    .filter {
+        gap: 6px;
+    }
+}

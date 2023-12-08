@@ -83,7 +83,7 @@
     }
     .portfolio__link-project:after {
         top: 57%;
-        right: 0;
+        right: 3px;
     }
 }
 

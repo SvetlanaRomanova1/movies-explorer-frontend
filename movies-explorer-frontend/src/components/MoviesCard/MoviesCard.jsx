@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import './MoviesCard.css';
+import DeleteIconMovies from "../svg/DeleteIconMovies";
+import Footer from "../Footer/Footer";
 
-function MoviesCard({ id, title, duration, image }) {
+function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
     const [isActive, setIsActive] = useState(false);
 
     const onClick = () => {
@@ -12,15 +14,23 @@ function MoviesCard({ id, title, duration, image }) {
 
     return (
         <article className={`movies-card ${saveCardClass}`}>
-            <div className="movies-card__image" style={{ backgroundImage: `url(${image})` }} />
-            <button
+            <div className="movies-card__image" style={{backgroundImage: `url(${image})`}}/>
+            {!isSavedMoviesPage && <button
                 onClick={onClick}
-                className="movies-card__button_save"
-            >Сохранить</button>
+                className="movies-card__button_action"
+            >
+                Сохранить
+            </button>}
+            {isSavedMoviesPage && (
+                <button className="movies-card__button_action movies-card__button_color">
+                    <DeleteIconMovies/>
+                </button>
+            )}
             <div className="movies-card__context">
                 <p className="movies-card__title">{title}</p>
                 <span className="movies-card__duration">{duration}</span>
             </div>
+
         </article>
     );
 }
