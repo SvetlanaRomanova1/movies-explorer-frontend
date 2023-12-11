@@ -1,0 +1,40 @@
+.menu__mobile_container {
+    max-width: 520px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #FFF;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    z-index: 1;
+}
+
+.menu__mobile-button_close {
+    background: transparent;
+    border: unset;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu__mobile-button_close:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 420px) {
+    .menu__mobile-button_close {
+        right: 6px;
+        top: 10px;
+    }
+}

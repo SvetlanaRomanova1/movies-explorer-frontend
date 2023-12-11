@@ -1,0 +1,22 @@
+.welcome__title {
+    margin: 40px 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.welcome__link {
+    max-height: 38px;
+}
+
+@media(max-width: 470px) {
+    .welcome__title {
+        margin: 50px 0 80px;
+        text-align: center;
+    }
+    .welcome__link {
+        display: block;
+        text-align: center;
+    }
+}
