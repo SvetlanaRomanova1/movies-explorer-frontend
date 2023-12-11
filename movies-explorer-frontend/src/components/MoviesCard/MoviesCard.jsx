@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './MoviesCard.css';
 import DeleteIconMovies from "../svg/DeleteIconMovies";
-import Footer from "../Footer/Footer";
 
 function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
     const [isActive, setIsActive] = useState(false);
@@ -22,7 +21,7 @@ function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
                 Сохранить
             </button>}
             {isSavedMoviesPage && (
-                <button className="movies-card__button_action movies-card__button_color">
+                <button className="movies-card__button_action movies-card__button_color movies-card__button_delete">
                     <DeleteIconMovies/>
                 </button>
             )}

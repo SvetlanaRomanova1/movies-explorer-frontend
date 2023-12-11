@@ -52,6 +52,24 @@
         margin: 0;
     }
     .filter {
-        gap: 6px;
+        gap: 17px;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter {
+        position: absolute;
+        bottom: -72px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 12px;
+    }
+    .filter__text {
+        font-size: 11px;
+
+    }
+
+    .search__form::before {
+        display: none;
     }
 }

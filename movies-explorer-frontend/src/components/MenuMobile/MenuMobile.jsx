@@ -1,4 +1,4 @@
-import './Menu-mobile.css';
+import './MenuMobile.css';
 import Navigation from "../Navigation/Navigation";
 import React from "react";
 import CloseIcon from "../svg/CloseIcon";

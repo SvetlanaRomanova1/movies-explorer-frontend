@@ -6,18 +6,18 @@ import AboutMe from "../AboutMe/AboutMe";
 import Portfolio from "../Portfolio/Portfolio";
 import Footer from "../Footer/Footer";
 import React from "react";
+import Header from "../Header/Header";
 
 function Main () {
     return (
-        <div>
+        <>
             <Promo />
             <NavTab />
             <AboutProject />
             <Techs />
             <AboutMe />
             <Portfolio />
-            < Footer/>
-        </div>
+        </>
     )
 }
 

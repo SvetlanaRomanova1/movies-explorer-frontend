@@ -1,6 +1,16 @@
 import './Footer.css';
+import {useLocation} from "react-router-dom";
+
+const footerEndpoints = ['/movies', '/saved-movies', '/'];
 
 function Footer() {
+
+    const location = useLocation();
+
+    if (!footerEndpoints.includes(location.pathname)) {
+        return null
+    }
+
     return (
         <footer className="footer">
             <div className="footer__container">

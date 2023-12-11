@@ -3,11 +3,11 @@ import React, {useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import logoHeader from '../../image/logo-header.svg'
 import Navigation from "../Navigation/Navigation";
-import MenuMobile from "../MenuMobile/Menu-mobile";
+import MenuMobile from "../MenuMobile/MenuMobile";
 
+const headerEndpoints = ['/movies', '/saved-movies', '/profile', '/'];
 
 function Header({isAuthenticated}) {
-
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
 
@@ -15,6 +15,10 @@ function Header({isAuthenticated}) {
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
+    }
+
+    if (!headerEndpoints.includes(location.pathname)) {
+        return null
     }
 
 

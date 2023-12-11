@@ -111,5 +111,9 @@
     .about-me__text {
         font-size: 11px;
         line-height: 16px;
+        margin-bottom: 10px;
+    }
+    .about-me__link {
+        margin: 0;
     }
 }

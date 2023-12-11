@@ -37,7 +37,7 @@ function MoviesCardList({movies, isSavedMoviesPage}) {
     return (
         <section className="movies__card">
             <Delimiter/>
-            <div className="movies-card__list">
+            <div className="movies__list">
                 {movies.slice(0, visibleMovies).map((movie) => (
                     <MoviesCard
                         key={movie.id}
@@ -50,8 +50,8 @@ function MoviesCardList({movies, isSavedMoviesPage}) {
                 ))}
             </div>
             {isShowMoreButton
-            && (<div className="movies-card__wrapper_button">
-                <button className="movies-card__button" onClick={showMoreMovies}>Ещё</button>
+            && (<div className="movies__wrapper_button">
+                <button className="movies__button" onClick={showMoreMovies}>Ещё</button>
             </div>)}
         </section>
     );

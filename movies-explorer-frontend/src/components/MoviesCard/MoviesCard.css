@@ -77,6 +77,10 @@
     margin: 0;
 }
 
+.movies-card__button_delete  {
+    padding: 0;
+}
+
 .movies-card__duration {
     color: #A0A0A0;
     font-size: 11px;
@@ -109,6 +113,27 @@
         height: 190px;
     }
     .movies-card__context {
-        margin: 26px 0 0 0;
+        margin: 22px 0 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .movies-card__image {
+        width: 300px;
+        height: 168px;
+    }
+    .movies-card__title {
+        font-size: 12px;
+        width: 210px;
+    }
+    .movies-card__context {
+        margin: 14px 0 0 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .movies-card__button_action {
+        top: 10px;
+        right: 10px;
     }
 }

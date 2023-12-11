@@ -10,6 +10,9 @@ import Preloader from "../ Preloader/ Preloader";
 import NotFound from "../NotFound/NotFound";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
+import Register from "../Register/Register";
+import Login from "../Login/Login";
+
 
 function App() {
     const [currentUser, setCurrentUser] = useState({});
@@ -21,12 +24,15 @@ function App() {
             <CurrentUserContext.Provider value={currentUser}>
                 <Header isAuthenticated={isAuthenticated}/>
                 <Routes>
-                    <Route path="/" element={<Main/>}/>
+                    <Route path="/" element={<Main/>} index={true}/>
                     <Route path="/movies" element={<Movies/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="/saved-movies" element={<SavedMovies/>}/>
                     <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/signup" element={<Register/>}/>
+                    <Route path="/signin" element={<Login/>} />
                 </Routes>
+                < Footer/>
             </CurrentUserContext.Provider>
         </div>
     );
