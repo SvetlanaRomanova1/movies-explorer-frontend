@@ -10,7 +10,7 @@
     background: #FFF;
     box-sizing: border-box;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     transition: transform 0.3s ease-in-out;

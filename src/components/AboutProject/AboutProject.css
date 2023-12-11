@@ -37,6 +37,7 @@
 .about-project__content-time {
     display: flex;
     margin: 110px 0 110px 0;
+    justify-content: center;
 }
 
 .about-project__time-backend {

@@ -34,10 +34,10 @@ function Header({isAuthenticated}) {
                     isAuthenticated={isAuthenticated}
                 />
                 {isAuthenticated && (
-                    <button className="header__menu-mobile_button" onClick={toggleMobileMenu}>
-                        <span className="header__menu-mobile_icon"/>
-                        <span className="header__menu-mobile_icon"/>
-                        <span className="header__menu-mobile_icon"/>
+                    <button className="header__menu-mobile-button" onClick={toggleMobileMenu}>
+                        <span className="header__menu-mobile-icon"/>
+                        <span className="header__menu-mobile-icon"/>
+                        <span className="header__menu-mobile-icon"/>
                     </button>
                 )}
                 {isMobileMenuOpen && <MenuMobile setMobileMenuOpen={setMobileMenuOpen}/>}

@@ -3,11 +3,6 @@
     max-width: 22.5rem;
 }
 
-.movies-card:hover:not(.movies-card__save) .movies-card__button_action  {
-    opacity: 1;
-    cursor: pointer;
-}
-
 .movies-card {
     cursor: pointer;
 }
@@ -105,6 +100,11 @@
     width: 100%;
     gap: 0 30px;
     align-items: center;
+}
+
+.movies-card_hovered:not(.movies-card__save) .movies-card__button_action  {
+    opacity: 1;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

@@ -16,13 +16,14 @@ import Login from "../Login/Login";
 
 function App() {
     const [currentUser, setCurrentUser] = useState({});
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     return (
         <div className="App">
             <Preloader/>
             <CurrentUserContext.Provider value={currentUser}>
                 <Header isAuthenticated={isAuthenticated}/>
+                <main>
                 <Routes>
                     <Route path="/" element={<Main/>} index={true}/>
                     <Route path="/movies" element={<Movies/>}/>
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/signup" element={<Register/>}/>
                     <Route path="/signin" element={<Login/>} />
                 </Routes>
+                </main>
                 < Footer/>
             </CurrentUserContext.Provider>
         </div>

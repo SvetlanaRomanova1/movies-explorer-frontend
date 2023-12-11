@@ -69,6 +69,13 @@
     align-items: center;
 }
 
+@media (max-width: 1170px) {
+    .search__form {
+        margin: 0 30px 0 30px;
+        padding: 19px 20px 19px 19px;
+    }
+}
+
 @media (max-width: 768px) {
     .search {
         margin: 80px 0 109px 0;
@@ -80,9 +87,12 @@
 }
 
 @media (max-width: 600px) {
+    .search {
+        margin: 80px 10px 109px 10px;
+    }
     .search__form {
         margin: 0;
-        padding: 19px 30px 19px 19px;
+        padding: 19px 20px 19px 9px;
     }
     .search__delimiter {
         display: none;

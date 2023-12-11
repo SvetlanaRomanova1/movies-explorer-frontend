@@ -32,7 +32,7 @@
     gap: 30px;
 }
 
-.header__menu-mobile_button {
+.header__menu-mobile-button {
     background: transparent;
     border: unset;
     float: right;
@@ -42,7 +42,7 @@
     display: none;
 }
 
-.header__menu-mobile_icon {
+.header__menu-mobile-icon {
     width: 30px;
     height: 3px;
     background-color: #000000;
@@ -56,7 +56,7 @@
     .header__container{
         padding: 18px 30px;
     }
-    .header__menu-mobile_button {
+    .header__menu-mobile-button {
         display: inline-block;
     }
 }
@@ -65,7 +65,7 @@
     .header__container {
         padding: 18px 14px;
     }
-    .header__menu-mobile_icon {
+    .header__menu-mobile-icon {
         width: 24px;
         height: 3px;
         margin: 6px 2px;

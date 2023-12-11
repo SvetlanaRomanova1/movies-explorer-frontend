@@ -15,7 +15,7 @@ function AuthenticationButtons (props) {
             <button className="authentication__button">
                 {submitButtonText}
             </button>
-            <div className="authentication__info_container">
+            <div className="authentication__info-container">
                 <p className="authentication__description">
                     {subtitle}
                 </p>

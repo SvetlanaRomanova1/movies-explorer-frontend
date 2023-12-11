@@ -5,10 +5,10 @@ import {saveMovies} from '../../constant'
 
 function SavedMovies() {
     return (
-        <main>
+        <>
             <SearchForm/>
-            <MoviesCardList isSavedMoviesPage movies={saveMovies}/>
-        </main>
+            <MoviesCardList isSavedMoviesPage movies={saveMovies} />
+        </>
     )
 }
 
