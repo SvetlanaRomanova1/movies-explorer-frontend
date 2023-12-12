@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.navigation__link_registration {
+.navigation__link-registration {
     text-align: right;
     font-size: 12px;
     font-style: normal;
@@ -17,11 +17,11 @@
     transition: opacity 0.4s ease-out;
 }
 
-.navigation__link_registration:hover {
+.navigation__link-registration:hover {
     opacity: 0.5;
 }
 
-.navigation__link_login {
+.navigation__link-login {
     color: #FFF;
     font-size: 12px;
     font-style: normal;
@@ -40,12 +40,12 @@
     margin: 0 0 0 10px;
 }
 
-.navigation__link_login:hover {
+.navigation__link-login:hover {
     opacity: 0.5;
 }
 
-.navigation__link_movies,
-.navigation__link_account {
+.navigation__link-movies,
+.navigation__link-account {
     color: #000;
     text-align: right;
     font-size: 14px;
@@ -57,12 +57,12 @@
     position: relative;
 }
 
-.navigation__link_movies:hover {
+.navigation__link-movies:hover {
     opacity: 0.5;
 }
 
 
-.navigation__icon_account {
+.navigation__icon-account {
     border-radius: 6px;
     width: 10px;
     height: 10px;
@@ -74,7 +74,7 @@
     padding: 10px;
 }
 
-.navigation__link_account {
+.navigation__link-account {
     display: flex;
     align-items: center;
     gap: 13px;
@@ -82,11 +82,11 @@
     transition: opacity 0.4s ease-out;
 }
 
-.navigation__link_account:hover {
+.navigation__link-account:hover {
     opacity: 0.5;
 }
 
-.navigation__link_movies.active  {
+.active  {
     font-weight: 500;
 }
 
@@ -99,7 +99,7 @@
         display: flex;
     }
 
-    .navigation__mobile_menu {
+    .navigation__mobile-menu {
         display: flex;
         flex-direction: column;
         padding: 158px 0 60px 0;
@@ -107,7 +107,7 @@
         height: 100%;
     }
 
-    .navigation__link_movies.active:before  {
+    .active:before  {
         content: "";
         width: 100%;
         height: 2px;
@@ -117,8 +117,8 @@
         top: 26px;
     }
 
-    .navigation__link_movies,
-    .navigation__link_account {
+    .navigation__link-movies,
+    .navigation__link-account {
         color: #000;
         text-align: center;
         font-feature-settings: 'clig' off, 'liga' off;
@@ -128,11 +128,11 @@
         line-height: normal;
     }
 
-    .navigation__save_movies {
+    .navigation__save-movies {
         flex-grow: 1;
     }
 
-    .navigation__link_account {
+    .navigation__link-account {
         font-size: 14px;
         line-height: 16px; /* 114.286% */
         margin: 0;
@@ -143,21 +143,21 @@
     .navigation {
         gap: 14px;
     }
-    .navigation__link_login {
+    .navigation__link-login {
         font-size: 10px;
         width: 54px;
         height: 26px;
         margin: 0;
     }
-    .navigation__link_registration {
+    .navigation__link-registration {
         font-size: 10px;
     }
 
-    .navigation__mobile_menu {
+    .navigation__mobile-menu {
         gap:24px;
         padding: 142px 0 48px 0;
     }
-    .navigation__link_movies.active:before {
+    .active:before {
         top: 29px;
     }
 }

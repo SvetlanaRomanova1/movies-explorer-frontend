@@ -26,10 +26,6 @@
     line-height: normal;
 }
 
-.profile__input[type='email'] {
-    border: none;
-}
-
 .profile__form {
     display: flex;
     justify-content: center;
@@ -49,7 +45,7 @@
     flex-direction: column;
 }
 
-.profile__label_text {
+.profile__label-text {
     margin: 0;
     font-size: 11px;
     font-style: normal;
@@ -57,19 +53,19 @@
     line-height: normal;
 }
 
-.profile__label_wrapper {
+.profile__label-wrapper {
     position: relative;
     gap: 16px;
     display: flex;
     flex-direction: column;
 }
 
-.profile__label_context {
+.profile__label-context {
     display: flex;
     justify-content: space-between;
 }
 
-.profile__container_button {
+.profile__container-button {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -77,7 +73,7 @@
     top: 96px;
 }
 
-.profile__button_edit {
+.profile__button-edit {
     background: transparent;
     border: unset;
     font-size: 13px;
@@ -89,11 +85,11 @@
 }
 
 
-.profile__button_edit:hover {
+.profile__button-edit:hover {
     opacity: 0.5;
 }
 
-.profile__button_exit {
+.profile__button-exit {
     background: transparent;
     border: unset;
     color: #FF4062;
@@ -105,7 +101,7 @@
     transition: opacity 0.4s ease-out;
 }
 
-.profile__button_exit:hover {
+.profile__button-exit:hover {
     opacity: 0.5;
 }
 
@@ -121,7 +117,7 @@
         gap: 96px;
     }
 
-    .profile__container_button {
+    .profile__container-button {
         top: 112px;
     }
 }
@@ -132,7 +128,7 @@
         gap: 80px;
     }
 
-    .profile__container_button {
+    .profile__container-button {
         position: absolute;
         bottom: 38px;
         top: unset;
@@ -142,11 +138,11 @@
         width: 260px;
     }
 
-    .profile__button_edit {
+    .profile__button-edit {
         font-size: 12px;
     }
 
-    .profile__button_exit {
+    .profile__button-exit {
         font-size: 12px;
         white-space: nowrap;
     }

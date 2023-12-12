@@ -15,6 +15,7 @@
     padding: 19px 30px 19px 19px;
     justify-content: space-between;
     box-sizing: border-box;
+    border-radius: 9px;
 }
 
 .search__form::before {
@@ -64,7 +65,7 @@
     line-height: 20px;
 }
 
-.search__form_controls {
+.search__form-controls {
     display: flex;
     align-items: center;
 }

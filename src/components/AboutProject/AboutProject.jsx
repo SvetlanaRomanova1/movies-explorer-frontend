@@ -3,7 +3,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 
 function AboutProject() {
     return (
-        <section className="about-project" id="about">
+        <div className="about-project" id="about">
             <SectionHeader>
                 О проекте
             </SectionHeader>
@@ -31,7 +31,7 @@ function AboutProject() {
                     <p className="about-project__subject">Front-end</p>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

@@ -15,7 +15,7 @@
     width: 100%;
 }
 
-.movies__wrapper_button {
+.movies__wrapper-button {
     grid-column: span 3;
     justify-self: center;
     margin: 108px 0 0 0;
@@ -44,7 +44,7 @@
         grid-template-columns: repeat(auto-fit, 21rem);
         grid-gap: 88px 30px;
     }
-    .movies__wrapper_button {
+    .movies__wrapper-button {
         margin: 104px 0 0 0;
     }
     .movies__card {

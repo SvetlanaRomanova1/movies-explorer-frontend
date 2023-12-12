@@ -4,14 +4,14 @@ import AuthenticationButtons from "../AuthenticationButtons/AuthenticationButton
 
 function Register(props) {
     return (
-        <main className="register">
+        <div className="register">
             <form className="register__form">
                 <WelcomeLogo
                     title="Добро пожаловать!"
                 />
                 <div className="register__form-container">
                     <label className="register__label">
-                        <p className="register__text_input">Имя</p>
+                        <span className="register__text-input">Имя</span>
                         <input
                             type="text"
                             className="register__input"
@@ -23,7 +23,7 @@ function Register(props) {
                         />
                     </label>
                     <label className="register__label">
-                        <p className="register__text_input">E-mail</p>
+                        <span className="register__text-input">E-mail</span>
                         <input
                             type="email"
                             className="register__input"
@@ -32,7 +32,7 @@ function Register(props) {
                         />
                     </label>
                     <label className="register__label">
-                        <p className="register__text_input">Пароль</p>
+                        <span className="register__text-input">Пароль</span>
                         <input
                             type="password"
                             className="register__input"
@@ -46,7 +46,7 @@ function Register(props) {
                     login="Войти"
                 />
             </form>
-        </main>
+        </div>
     )
 }
 

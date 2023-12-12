@@ -3,7 +3,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 
 function Techs() {
     return (
-        <section className="techs" id="techs">
+        <div className="techs" id="techs">
             <SectionHeader>
                 Технологии
             </SectionHeader>
@@ -20,7 +20,7 @@ function Techs() {
                     <li className="techs__item">Express.js</li>
                     <li className="techs__item">MongoDB</li>
                 </ul>
-        </section>
+        </div>
     )
 }
 

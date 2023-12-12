@@ -4,7 +4,7 @@ import avatarImage from '../../image/avatar.svg'
 
 function AboutMe() {
     return (
-        <section className="about-me" id="student">
+        <div className="about-me" id="student">
             <SectionHeader>
                 Студент
             </SectionHeader>
@@ -29,7 +29,7 @@ function AboutMe() {
                     <img className="about-me__avatar-image" src={avatarImage} alt=""/>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

@@ -19,10 +19,10 @@ function AuthenticationButtons (props) {
                 <p className="authentication__description">
                     {subtitle}
                 </p>
-                <Link to="/signin" className="register__link_exit">
+                <Link to="/signin" className="register__link-exit">
                     {login}
                 </Link>
-                <Link to="/signup" className="register__link_exit">
+                <Link to="/signup" className="register__link-exit">
                     {register}
                 </Link>
             </div>

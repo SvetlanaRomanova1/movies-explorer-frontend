@@ -11,17 +11,20 @@ function FilterCheckbox() {
     }
 
     return (
-        <label className="filter">
-            <input
-                onClick={onClick}
-                className="filter__checkbox"
-                type="checkbox"
-            />
-            <div className={`${filterTrack} filter__track`}>
-                <div className={`${filterCheckbox} filter__thumb`}/>
-            </div>
-            <span className="filter__text">Короткометражки</span>
-        </label>
+        <>
+            <label className="filter">
+                <input
+                    onClick={onClick}
+                    className="filter__checkbox"
+                    type="checkbox"
+                />
+                <span className={`${filterTrack} filter__track`}>
+                    <span className={`${filterCheckbox} filter__thumb`}/>
+                </span>
+                <span className="filter__text">Короткометражки</span>
+            </label>
+        </>
+
     );
 }
 

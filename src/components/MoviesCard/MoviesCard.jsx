@@ -14,7 +14,7 @@ function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
 
 
     const onMouseOver = (e) => {
-       setMoviesCardHovered('movies-card_hovered');
+       setMoviesCardHovered('movies-card-hovered');
     }
 
     const onMouseLeave = (e) => {
@@ -22,7 +22,7 @@ function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
     }
 
     return (
-        <article
+        <div
             className={`movies-card ${saveCardClass} ${moviesCardHovered}`}
             onMouseOver={onMouseOver}
             onMouseLeave={onMouseLeave}
@@ -30,13 +30,13 @@ function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
             <div className="movies-card__image" style={{backgroundImage: `url(${image})`}}/>
             {!isSavedMoviesPage && <button
                 onClick={onClick}
-                className={`movies-card__button_action`}
+                className={`movies-card__button-action`}
             >
                 Сохранить
             </button>}
             {isSavedMoviesPage && (
                 <button
-                    className={`movies-card__button_action movies-card__button_color movies-card__button_delete`}>
+                    className={`movies-card__button-action movies-card__button-color movies-card__button-delete`}>
                     <DeleteIconMovies/>
                 </button>
             )}
@@ -45,7 +45,7 @@ function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
                 <span className="movies-card__duration">{duration}</span>
             </div>
 
-        </article>
+        </div>
     );
 }
 

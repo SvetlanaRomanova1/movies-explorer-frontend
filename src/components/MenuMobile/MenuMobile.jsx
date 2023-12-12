@@ -10,8 +10,8 @@ function MenuMobile({setMobileMenuOpen}) {
     }
 
     return (
-        <div className="menu__mobile_container">
-                <button className="menu__mobile-button_close" onClick={handleCloseMenu}>
+        <div className="menu__mobile-container">
+                <button className="menu__mobile-button-close" onClick={handleCloseMenu}>
                     <CloseIcon />
                 </button>
                 <Navigation setMobileMenuOpen={setMobileMenuOpen} isAuthenticated={true}/>

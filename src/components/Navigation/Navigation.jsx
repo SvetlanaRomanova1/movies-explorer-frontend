@@ -4,7 +4,7 @@ import iconAccount from '../../image/icon-profile.svg'
 import './Navigation.css';
 
 function Navigation({isAuthenticated, isHeader, setMobileMenuOpen, isHomePage}) {
-    const navigationMobile = isHeader ? '' : 'navigation__mobile_menu';
+    const navigationMobile = isHeader ? '' : 'navigation__mobile-menu';
     const navigationPink = isHomePage ? 'navigation__pink' : '';
     const navigationAuthenticated = !isAuthenticated && isHomePage ? 'navigation__authenticated': ''
 
@@ -18,26 +18,27 @@ function Navigation({isAuthenticated, isHeader, setMobileMenuOpen, isHomePage}) 
                 <>
                     {!isHeader &&
                     <NavLink
-                        to="/" className="navigation__link_movies"
+                        to="/"
+                        className="navigation__link-movies"
                         onClick={onClick}
                     >
                         Главная
                     </NavLink>}
                     <NavLink
-                        to="/movies" className="navigation__link_movies"
+                        to="/movies" className="navigation__link-movies"
                         onClick={onClick}
                     >
                         Фильмы
                     </NavLink>
                     <NavLink
-                        to="/saved-movies" className="navigation__link_movies navigation__save_movies"
+                        to="/saved-movies" className="navigation__link-movies navigation__save-movies"
                         onClick={onClick}
                     >
                         Сохраненные фильмы
                     </NavLink>
                     <NavLink
                         to="/profile"
-                        className="navigation__link_account active__link"
+                        className="navigation__link-account active__link"
                         onClick={onClick}
                     >
                         Аккаунт
@@ -46,10 +47,10 @@ function Navigation({isAuthenticated, isHeader, setMobileMenuOpen, isHomePage}) 
                 </>
             ) : (
                 <>
-                    <Link to="/signup" className="navigation__link_registration">
+                    <Link to="/signup" className="navigation__link-registration">
                         Регистрация
                     </Link>
-                    <Link to="/signin" className="navigation__link_login">
+                    <Link to="/signin" className="navigation__link-login">
                         Войти
                     </Link>
                 </>

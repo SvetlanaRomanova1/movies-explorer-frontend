@@ -4,12 +4,12 @@ import './Login.css';
 
 function Login () {
     return(
-        <main className="login">
+        <div className="login">
             <form className="login__form">
                 <WelcomeLogo title="Рады видеть!" />
                 <div className="login__form-container">
                     <label className="login__label">
-                        <p className="login__text_input">E-mail</p>
+                        <span className="login__text_input">E-mail</span>
                         <input
                             type="email"
                             className="login__input"
@@ -18,7 +18,7 @@ function Login () {
                         />
                     </label>
                     <label className="login__label">
-                        <p className="login__text_input">Пароль</p>
+                        <span className="login__text-input">Пароль</span>
                         <input
                             type="password"
                             className="login__input"
@@ -32,7 +32,7 @@ function Login () {
                     register="Регистрация"
                 />
             </form>
-        </main>
+        </div>
     )
 }
 

@@ -38,7 +38,7 @@
     line-height: normal;
 }
 
-.register__text_input {
+.register__text-input {
     color: #A0A0A0;
     font-size: 10px;
     font-style: normal;
@@ -47,7 +47,7 @@
     margin: 0;
 }
 
-.register__link_exit {
+.register__link-exit {
     text-decoration: none;
     color: #000;
     text-align: center;
@@ -58,7 +58,7 @@
     transition: opacity 0.4s ease-out;
 }
 
-.register__link_exit:hover {
+.register__link-exit:hover {
     opacity: 0.7;
 }
 
@@ -86,7 +86,7 @@
         width: 230px;
     }
 
-    .register__link_exit {
+    .register__link-exit {
         font-size: 12px;
     }
 }

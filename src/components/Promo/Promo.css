@@ -20,10 +20,6 @@
     top: -20px;
 }
 
-.promo__icon {
-    /*margin: 82px 0 122px 0;*/
-}
-
 .promo__title {
     margin: 0;
     max-width: 730px;
@@ -37,7 +33,7 @@
 }
 
 @media (max-width: 1480px)  {
-    .promo__title_block {
+    .promo__title-block {
         display: block;
     }
 }
@@ -60,7 +56,7 @@
         line-height: 39px;
         letter-spacing: -1.24px;
     }
-    .promo__title_block {
+    .promo__title-block {
         display: inline;
     }
 }

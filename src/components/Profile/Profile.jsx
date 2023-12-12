@@ -1,13 +1,20 @@
 import './Profile.css';
+import {useState} from "react";
 
 function Profile() {
+    const [inputValue, setInputValue] = useState('');
+
+    const handleChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
     return (
-        <main className="profile">
+        <div className="profile">
             <h2 className="profile__title">Привет, Виталий!</h2>
             <form className="profile__form">
-                <div className="profile__label_wrapper">
-                    <div className="profile__label_context">
-                        <label className="profile__label_text">
+                <div className="profile__label-wrapper">
+                    <div className="profile__label-context">
+                        <label className="profile__label-text">
                             Имя
                         </label>
                         <input
@@ -15,12 +22,13 @@ function Profile() {
                             className="profile__input"
                             name="name"
                             value="Виталий"
+                            onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="profile__delimiter"/>
-                    <div className="profile__label_context">
-                        <label className="profile__label_text">
+                    <div className="profile__label-context">
+                        <label className="profile__label-text">
                             E-mail
                         </label>
                         <input
@@ -28,20 +36,21 @@ function Profile() {
                             className="profile__input"
                             name="email"
                             value="poooochta@mail.ru"
+                            onChange={handleChange}
                             required
                         />
                     </div>
                 </div>
             </form>
-            <div className="profile__container_button">
-                <button className="profile__button_edit">
+            <div className="profile__container-button">
+                <button className="profile__button-edit">
                     Редактировать
                 </button>
-                <button className="profile__button_exit">
+                <button className="profile__button-exit">
                     Выйти из аккаунта
                 </button>
             </div>
-        </main>
+        </div>
     )
 }
 
