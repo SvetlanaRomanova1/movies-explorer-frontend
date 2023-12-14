@@ -1,0 +1,144 @@
+.about-project {
+    margin: 110px 70px 0 70px;
+}
+
+.about-project__content {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    margin: 70px 0 0 0;
+    gap: 40px;
+}
+
+.about-project__section {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.about-project__subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    margin: 0;
+}
+
+
+.about-project__transfer {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+.about-project__content-time {
+    display: flex;
+    margin: 110px 0 110px 0;
+    justify-content: center;
+}
+
+.about-project__time-backend {
+    width: 17.8125vw;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 9px 0;
+    margin: 0;
+}
+
+.about-project__time-frontend {
+    width: 71.25vw;
+    background: #F2F2F2;
+    text-align: center;;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 9px 0;
+    margin: 0;
+}
+
+.about-project__subject {
+    text-align: center;
+    color: #A0A0A0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    margin: 14px 0 0 0;
+}
+
+
+@media (max-width: 768px) {
+    .about-project__time-frontend {
+        width: 69.25vw;
+    }
+
+    .about-project {
+        margin: 90px 50px 0 50px;
+    }
+
+    .about-project__section {
+        gap: 18px;
+    }
+
+    .about-project__content {
+        gap: 30px;
+    }
+
+    .about-project__content-time {
+        margin: 90px 0 90px 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .about-project {
+        margin: 70px 18px 0 18px;
+    }
+
+    .about-project__content {
+        grid-template: 1fr / repeat(1, 1fr);
+        margin: 60px 0 0 0;
+        gap: 56px;
+    }
+
+    .about-project__section {
+        gap: 16px;
+    }
+
+    .about-project__subtitle {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__transfer {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .about-project__content-time {
+        margin: 60px 0 69px 0;
+    }
+
+    .about-project__time-backend {
+        width: 30.8125vw;
+        font-size: 11px;
+    }
+
+    .about-project__time-frontend {
+        width: 184px;
+        font-size: 11px;
+    }
+
+    .about-project__subject {
+        font-size: 11px;
+        margin: 11px 0 0 0;
+    }
+}
