@@ -2,6 +2,11 @@
     margin: 110px 70px 0 70px;
 }
 
+.about-me__avatar-image {
+    max-width: 270px;
+    max-height: 327px;
+}
+
 .about-me__name {
     font-size: 50px;
     font-style: normal;

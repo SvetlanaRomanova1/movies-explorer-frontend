@@ -1,5 +1,5 @@
 import SectionHeader from '../SectionHeader/SectionHeader.jsx';
-import avatarImage from '../../image/avatar.svg';
+import avatarImage from '../../image/avatar.jpeg';
 import './AboutMe.css';
 
 function AboutMe() {
