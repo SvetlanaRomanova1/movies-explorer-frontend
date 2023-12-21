@@ -1,8 +1,8 @@
+import SectionHeader from '../SectionHeader/SectionHeader.jsx';
 import './Techs.css';
-import SectionHeader from "../SectionHeader/SectionHeader";
 
 function Techs() {
-    return (
+  return (
         <div className="techs" id="techs">
             <SectionHeader>
                 Технологии
@@ -21,7 +21,7 @@ function Techs() {
                     <li className="techs__item">MongoDB</li>
                 </ul>
         </div>
-    )
+  );
 }
 
 export default Techs;

@@ -1,8 +1,8 @@
 import './AboutProject.css';
-import SectionHeader from "../SectionHeader/SectionHeader";
+import SectionHeader from '../SectionHeader/SectionHeader.jsx';
 
 function AboutProject() {
-    return (
+  return (
         <div className="about-project" id="about">
             <SectionHeader>
                 О проекте
@@ -11,13 +11,15 @@ function AboutProject() {
                 <div className="about-project__section">
                     <h3 className="about-project__subtitle">Дипломный проект включал 5 этапов</h3>
                     <p className="about-project__transfer">
-                        Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.
+                        Составление плана, работу над бэкендом,
+                      вёрстку, добавление функциональности и финальные доработки.
                     </p>
                 </div>
                 <div className="about-project__section">
                     <h3 className="about-project__subtitle">На выполнение диплома ушло 5 недель</h3>
                     <p className="about-project__transfer">
-                        У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.
+                        У каждого этапа был мягкий и жёсткий дедлайн, которые нужно
+                      было соблюдать, чтобы успешно защититься.
                     </p>
                 </div>
             </div>
@@ -32,7 +34,7 @@ function AboutProject() {
                 </div>
             </div>
         </div>
-    )
+  );
 }
 
 export default AboutProject;

@@ -1,9 +1,9 @@
+import SectionHeader from '../SectionHeader/SectionHeader.jsx';
+import avatarImage from '../../image/avatar.svg';
 import './AboutMe.css';
-import SectionHeader from "../SectionHeader/SectionHeader";
-import avatarImage from '../../image/avatar.svg'
 
 function AboutMe() {
-    return (
+  return (
         <div className="about-me" id="student">
             <SectionHeader>
                 Студент
@@ -14,11 +14,12 @@ function AboutMe() {
                      <h3 className="about-me__name">Светлана</h3>
                      <p className="about-me__description">Фронтенд-разработчик, 27 лет</p>
                      <span className="about-me__text">
-                 Я живу в городе Москва. Стремлюсь начать свою карьеру в сфере веб-разработки в качестве JavaScript разработчика.
+                 Я живу в городе Москва. Стремлюсь начать свою карьеру в сфере веб-разработки в
+                       качестве JavaScript разработчика.
                     Имею базовые знания в области веб-технологий и опыт работы с  JavaScript.
                     Готова к активному обучению, развитию и вкладу в проекты.
-                    В свободное время занимаюсь изучением новых технологий по программированию, особенно JavaScript.
-                    Учусь применять знания на практике в небольших проектах
+                    В свободное время занимаюсь изучением новых технологий по программированию,
+                       особенно JavaScript.Учусь применять знания на практике в небольших проектах
 
                 </span>
                  </div>
@@ -30,7 +31,7 @@ function AboutMe() {
                 </div>
             </div>
         </div>
-    )
+  );
 }
 
 export default AboutMe;

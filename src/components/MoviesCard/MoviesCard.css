@@ -12,7 +12,19 @@
     height: 12.5625rem; /* 201px */
     border-radius: 6px;
     object-fit: cover;
+    transition: 0.3s linear;
 }
+
+.movies-card__image:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.movies-card__image-wrap{
+    background: url('../../image/yotub.png') center/46px no-repeat;
+    transition: 0.3s linear;
+}
+
 
 .movies-card__button-action {
     position: absolute;

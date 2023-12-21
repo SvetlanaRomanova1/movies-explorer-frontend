@@ -47,6 +47,19 @@
     margin: 0;
 }
 
+.register__input_error {
+    color: #FF4062;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.register__input-errors-api {
+    padding: 10px 0;
+    text-align: center;
+}
+
 .register__link-exit {
     text-decoration: none;
     color: #000;
@@ -60,16 +73,6 @@
 
 .register__link-exit:hover {
     opacity: 0.7;
-}
-
-
-@media (max-width: 768px) {
-    .register {
-        padding: 232px 0 0 0;
-    }
-    .register__form {
-        /*min-height: 561px;*/
-    }
 }
 
 @media (max-width: 470px) {

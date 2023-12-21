@@ -1,20 +1,22 @@
 import './FilterCheckbox.css';
-import {useState} from "react";
+import { useState } from 'react';
 
-function FilterCheckbox() {
-    const [isActive, setIsActive] = useState(false);
-    const filterCheckbox = isActive ? 'filter__thumb-checked' : '';
-    const filterTrack = isActive ? 'filter__track-checked' : '';
+function FilterCheckbox({ onChange }) {
+  const [isActive, setIsActive] = useState(false);
+  const filterCheckbox = isActive ? 'filter__thumb-checked' : '';
+  const filterTrack = isActive ? 'filter__track-checked' : '';
 
-    const onClick = () => {
-        setIsActive(!isActive)
-    }
+  const onClick = () => {
+    setIsActive(!isActive);
+  };
 
-    return (
+  return (
         <>
             <label className="filter">
                 <input
+                    name="isShortFilm"
                     onClick={onClick}
+                    onChange={onChange}
                     className="filter__checkbox"
                     type="checkbox"
                 />
@@ -25,7 +27,7 @@ function FilterCheckbox() {
             </label>
         </>
 
-    );
+  );
 }
 
 export default FilterCheckbox;

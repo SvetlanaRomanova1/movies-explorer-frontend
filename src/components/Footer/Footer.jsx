@@ -1,17 +1,15 @@
+import { useLocation } from 'react-router-dom';
+import { FOOTER_ENDPOINTS } from '../../constant';
 import './Footer.css';
-import {useLocation} from "react-router-dom";
-
-const footerEndpoints = ['/movies', '/saved-movies', '/'];
 
 function Footer() {
+  const location = useLocation();
 
-    const location = useLocation();
+  if (!FOOTER_ENDPOINTS.includes(location.pathname)) {
+    return null;
+  }
 
-    if (!footerEndpoints.includes(location.pathname)) {
-        return null
-    }
-
-    return (
+  return (
         <footer className="footer">
             <div className="footer__container">
                 <h2 className="footer__title">Учебный проект Яндекс.Практикум&nbsp;х BeatFilm.</h2>
@@ -21,17 +19,17 @@ function Footer() {
                 <p className="footer__paragraph">&copy; 2023</p>
                 <ul className="footer__list">
                     <li className="footer__item">
-                        <a className="footer__link" target="_blank"  href="https://practicum.yandex.ru">Яндекс.Практикум</a>
+                        <a className="footer__link" target="_blank" href="https://practicum.yandex.ru" rel="noreferrer">Яндекс.Практикум</a>
                     </li>
                     <li className="footer__item">
-                        <a className="footer__link" target="_blank"  href="https://github.com/SvetlanaRomanova1">Github</a>
+                        <a className="footer__link" target="_blank" href="https://github.com/SvetlanaRomanova1" rel="noreferrer">Github</a>
                     </li>
 
                 </ul>
             </div>
 
         </footer>
-    )
+  );
 }
 
 export default Footer;

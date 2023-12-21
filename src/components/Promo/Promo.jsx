@@ -1,9 +1,7 @@
 import './Promo.css';
-import iconPromo from '../../image/promo-icon.svg'
 
 function Promo() {
-
-    return (
+  return (
         <section className="promo">
             <div className="promo__container">
                 <div className="promo__wrapper">
@@ -14,7 +12,7 @@ function Promo() {
                 </div>
             </div>
         </section>
-    )
+  );
 }
 
 export default Promo;

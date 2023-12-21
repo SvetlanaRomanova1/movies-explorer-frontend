@@ -1,15 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import './NotFound.css';
-import {useNavigate} from 'react-router-dom';
 
 function NotFound() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const goBack = () => {
-        navigate(-1);
-    }
+  const goBack = () => {
+    navigate(-1);
+  };
 
-
-    return (
+  return (
         <div className="not-found">
             <div className="not-found__description">
                 <h2 className="not-found__title">404</h2>
@@ -19,7 +18,7 @@ function NotFound() {
                 Назад
             </button>
         </div>
-    )
+  );
 }
 
 export default NotFound;

@@ -1,8 +1,9 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { HashLink as Link } from 'react-router-hash-link';
 import './NavTab.css';
-import {HashLink as Link} from "react-router-hash-link";
 
 function NavTab() {
-    return (
+  return (
         <nav className="nav-tab">
             <ul className="nav-tab__lists">
                 <li className="nav-tab__list">
@@ -16,7 +17,7 @@ function NavTab() {
                 </li>
             </ul>
         </nav>
-    )
+  );
 }
 
 export default NavTab;
