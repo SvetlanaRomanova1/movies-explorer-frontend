@@ -13,6 +13,7 @@
     border-radius: 6px;
     object-fit: cover;
     transition: 0.3s linear;
+    background-size: cover;
 }
 
 .movies-card__image:hover {

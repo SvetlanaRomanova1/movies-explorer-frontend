@@ -20,7 +20,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "scp -r ./build/* sveta_diploma@130.193.51.96:/home/sveta_diploma/movies-frontend"
   },
   "eslintConfig": {
     "extends": [
