@@ -15,7 +15,7 @@ npm i — установка зависимостей
 npm run start — запускает приложение
 
 ## *Ссылки:*
-
+* Pull-request [https://github.com/SvetlanaRomanova1/movies-explorer-frontend/pull/4](https://github.com/SvetlanaRomanova1/movies-explorer-frontend/pull/4)
 * Домен по которому доступно приложение [https://sromanova.diploma.nomoredomainsmonster.ru/saved-movies](https://sromanova.diploma.nomoredomainsmonster.ru/saved-movies)
 * Домен с собсвенным бэкендом [https://api.sromanova.diploma.nomoredomainsmonster.ru](https://api.sromanova.diploma.nomoredomainsmonster.ru/)
 * Домен со сторонним API(все фильмы) [https://api.nomoreparties.co/beatfilm-movies](https://api.nomoreparties.co/beatfilm-movies)
