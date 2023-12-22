@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox.jsx';
 import useFormAndValidation from '../../hooks/use-form-and-validation';
 import './SearchForm.css';
 
-function SearchForm({ updateMovies }) {
+function SearchForm({ updateMovies, savedMovies }) {
   const {
     values,
     handleChange,
     errors,
-  } = useFormAndValidation();
+  } = useFormAndValidation(true);
 
   function handleSubmit(e) {
     e.preventDefault();
     updateMovies(values);
   }
+
+  useEffect(() => {
+    updateMovies(values);
+  }, [values.isShortFilm, savedMovies]);
 
   return (
         <div className="search">
@@ -33,7 +37,7 @@ function SearchForm({ updateMovies }) {
                             Найти
                         </button>
                         <div className="search__delimiter"/>
-                        <FilterCheckbox onChange={handleChange} />
+                        <FilterCheckbox isActive={values.isShortFilm} onChange={handleChange} />
                     </div>
             </form>
         </div>

@@ -33,6 +33,7 @@ function useUpdateMovies() {
     updateMovies,
     setSavedMovies,
     removeMoviesById,
+    savedMovies,
   };
 }
 

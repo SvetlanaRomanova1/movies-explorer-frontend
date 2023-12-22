@@ -57,6 +57,7 @@ function Login() {
                             className="login__input"
                             value={values.email || ''}
                             onChange={handleChange}
+                            disabled={isLoading}
                             required
                         />
                         {errors.email && (
@@ -71,6 +72,7 @@ function Login() {
                             className="login__input"
                             value={values.password || ''}
                             onChange={handleChange}
+                            disabled={isLoading}
                             minLength="8"
                             required
                         />

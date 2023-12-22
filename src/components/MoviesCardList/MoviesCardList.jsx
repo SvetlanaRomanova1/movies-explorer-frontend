@@ -3,35 +3,27 @@ import MoviesCard from '../MoviesCard/MoviesCard.jsx';
 import Delimiter from '../Delimiter/Delimiter.jsx';
 import Preloader from '../Preloader/Preloader.jsx';
 import { CurrentUserContext } from '../../constexts/CurrentUserContext';
-import mainApi from '../../utils/MainApi';
 import useMediaQuery from '../../hooks/use-media-query';
 import { MEDIA_QUERIES } from '../../constant';
 import './MoviesCardList.css';
 
 function MoviesCardList(props) {
   const {
-    isSavedMoviesPage, movies, isLoading, removeMoviesById,
+    isSavedMoviesPage,
+    movies,
+    isLoading,
+    removeMoviesById,
+    saveIds,
+    setSaveIds,
   } = props;
 
   const [visibleMovies, setVisibleMovies] = useState(8);
-  const [saveIds, setSaveIds] = useState(new Map());
   const currentUser = useContext(CurrentUserContext);
   const isWideScreen = useMediaQuery(MEDIA_QUERIES.WIDE_SCREEN);
   const isMediumScreen = useMediaQuery(MEDIA_QUERIES.MEDIUM_SCREEN);
   const isSmallScreen = useMediaQuery(MEDIA_QUERIES.SMALL_SCREEN);
 
   useEffect(() => {
-    mainApi
-      .getSaveMovies()
-    // eslint-disable-next-line no-shadow
-      .then((movies) => {
-        setSaveIds(new Map(movies.map((move) => ([move.movieId, move._id]))));
-      })
-      .catch((error) => {
-        // eslint-disable-next-line no-console
-        console.error('Ошибка при получении сохраненных фильмов:', error);
-      });
-
     const handleResize = () => {
       if (isWideScreen) {
         setVisibleMovies(12);

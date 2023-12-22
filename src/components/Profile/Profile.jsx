@@ -5,7 +5,7 @@ import mainApi from '../../utils/MainApi';
 import { CurrentUserContext, SetCurrentUserContext } from '../../constexts/CurrentUserContext';
 import './Profile.css';
 
-function Profile() {
+function Profile({ setSaveIds }) {
   const setCurrentUser = useContext(SetCurrentUserContext);
   const currentUser = useContext(CurrentUserContext);
 
@@ -46,6 +46,7 @@ function Profile() {
   };
 
   const handleLogout = () => {
+    setSaveIds(new Map());
     setCurrentUser((state) => ({ ...state, isAuthenticated: false }));
     navigate('/');
     mainApi.signout();
@@ -72,6 +73,7 @@ function Profile() {
                             minLength="2"
                             maxLength="30"
                             onChange={handleChange}
+                            disabled={isLoading}
                             required
                         />
                     </div>
@@ -89,6 +91,7 @@ function Profile() {
                             name="email"
                             value={values.email || ''}
                             onChange={handleChange}
+                            disabled={isLoading}
                             required
                         />
                     </div>

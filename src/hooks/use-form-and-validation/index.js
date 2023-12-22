@@ -1,8 +1,12 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useContext } from 'react';
 import isEmail from 'validator/es/lib/isEmail';
+import { CurrentUserContext } from '../../constexts/CurrentUserContext';
 
-export default function useFormAndValidation() {
-  const [values, setValues] = useState({});
+export default function useFormAndValidation(isSaveToLocalStorage = false) {
+  const currentUser = useContext(CurrentUserContext);
+  const searchFromStorage = localStorage.getItem(currentUser.email);
+  const initialValues = searchFromStorage ? JSON.parse(searchFromStorage) : {};
+  const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [isValid, setIsValid] = useState(false);
 
@@ -30,7 +34,13 @@ export default function useFormAndValidation() {
       }
     }
 
-    setValues((prevValues) => ({ ...prevValues, [name]: input.type !== 'checkbox' ? value : checked }));
+    setValues((prevValues) => {
+      const result = { ...prevValues, [name]: input.type !== 'checkbox' ? value : checked };
+      if (isSaveToLocalStorage) {
+        localStorage.setItem(currentUser.email, JSON.stringify(result));
+      }
+      return result;
+    });
     setErrors((prevErrors) => ({ ...prevErrors, [name]: input.validationMessage }));
     setIsValid(Object.values(values).every((val) => val !== '') && input.closest('form').checkValidity());
   };

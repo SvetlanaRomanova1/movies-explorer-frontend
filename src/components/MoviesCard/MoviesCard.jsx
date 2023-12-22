@@ -27,7 +27,7 @@ function MoviesCard(props) {
 
   const [moviesCardHovered, setMoviesCardHovered] = useState('');
 
-  const saveCardClass = isSaveMovie ? 'movies-card__save' : '';
+  const saveCardClass = !isSavedMoviesPage && isSaveMovie ? 'movies-card__save' : '';
 
   const onMouseOver = () => {
     setMoviesCardHovered('movies-card-hovered');
@@ -52,7 +52,6 @@ function MoviesCard(props) {
         console.error('Ошибка удаления фильма:', error);
       });
   };
-
   const handleSaveMovies = (e) => {
     e.preventDefault();
     if (isSaveMovie) {

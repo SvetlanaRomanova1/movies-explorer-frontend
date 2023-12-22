@@ -64,6 +64,7 @@ function Register() {
                             maxLength="30"
                             value={values.name || ''}
                             onChange={handleChange}
+                            disabled={isLoading}
                             required
                         />
                         {errors.name && (
@@ -78,6 +79,7 @@ function Register() {
                             name="email"
                             value={values.email || ''}
                             onChange={handleChange}
+                            disabled={isLoading}
                             required
                         />
                         {errors.email && (
@@ -93,6 +95,7 @@ function Register() {
                             value={values.password || ''}
                             minLength="8"
                             onChange={handleChange}
+                            disabled={isLoading}
                             required
                         />
                         {errors.password && (
