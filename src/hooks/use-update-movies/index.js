@@ -6,9 +6,8 @@ function compareFilm(name1, name2) {
 }
 
 function useUpdateMovies() {
-  const [filteredMovies, setFilteredMovies] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
-  const updateMovies = (params) => {
+  const updateMovies = (setFilteredMovies) => (params) => {
     const {
       search = '',
       isShortFilm = false,
@@ -24,12 +23,9 @@ function useUpdateMovies() {
 
   function removeMoviesById(id) {
     setSavedMovies((prevState) => prevState.filter((item) => item._id !== id));
-    setFilteredMovies((prevState) => prevState.filter((item) => item._id !== id));
   }
 
   return {
-    filteredMovies,
-    setFilteredMovies,
     updateMovies,
     setSavedMovies,
     removeMoviesById,

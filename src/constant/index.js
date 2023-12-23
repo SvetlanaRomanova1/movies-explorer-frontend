@@ -8,3 +8,8 @@ export const MEDIA_QUERIES = {
 
 export const HEADER_ENDPOINTS = ['/movies', '/saved-movies', '/profile', '/'];
 export const FOOTER_ENDPOINTS = ['/movies', '/saved-movies', '/'];
+export const EIGHT_CARDS = 8;
+export const TWELVE_CARDS = 12;
+export const FIVE_CARDS = 5;
+export const TWO_CARDS = 2;
+export const THREE_CARDS = 3;

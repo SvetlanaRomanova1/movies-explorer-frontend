@@ -16,49 +16,49 @@ function Navigation({ isHeader, setMobileMenuOpen, isHomePage }) {
   };
 
   return (
-        <nav className={`navigation ${navigationMobile} ${navigationPink} ${navigationAuthenticated}`}>
-            {isAuthenticated ? (
-                <>
-                    {!isHeader
-                    && <NavLink
-                        to="/"
-                        className="navigation__link-movies"
-                        onClick={onClick}
-                    >
-                        Главная
-                    </NavLink>}
-                    <NavLink
-                        to="/movies" className="navigation__link-movies"
-                        onClick={onClick}
-                    >
+    <nav className={`navigation ${navigationMobile} ${navigationPink} ${navigationAuthenticated}`}>
+      {isAuthenticated ? (
+        <>
+          {!isHeader
+            && <NavLink
+              to="/"
+              className="navigation__link-movies"
+              onClick={onClick}
+            >
+                Главная
+            </NavLink>}
+          <NavLink
+            to="/movies" className="navigation__link-movies"
+            onClick={onClick}
+          >
                         Фильмы
-                    </NavLink>
-                    <NavLink
-                        to="/saved-movies" className="navigation__link-movies navigation__save-movies"
-                        onClick={onClick}
-                    >
+          </NavLink>
+          <NavLink
+            to="/saved-movies" className="navigation__link-movies navigation__save-movies"
+            onClick={onClick}
+          >
                         Сохраненные фильмы
-                    </NavLink>
-                    <NavLink
-                        to="/profile"
-                        className="navigation__link-account active__link"
-                        onClick={onClick}
-                    >
+          </NavLink>
+          <NavLink
+            to="/profile"
+            className="navigation__link-account active__link"
+            onClick={onClick}
+          >
                         Аккаунт
-                        <img className="navigation__icon_account" src={iconAccount} alt="иконка профиль"/>
-                    </NavLink>
-                </>
-            ) : (
-                <>
-                    <Link to="/signup" className="navigation__link-registration">
+            <img className="navigation__icon_account" src={iconAccount} alt="иконка профиль"/>
+          </NavLink>
+        </>
+      ) : (
+        <>
+          <Link to="/signup" className="navigation__link-registration">
                         Регистрация
-                    </Link>
-                    <Link to="/signin" className="navigation__link-login">
+          </Link>
+          <Link to="/signin" className="navigation__link-login">
                         Войти
-                    </Link>
-                </>
-            )}
-        </nav>
+          </Link>
+        </>
+      )}
+    </nav>
   );
 }
 

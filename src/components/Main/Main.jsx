@@ -8,14 +8,14 @@ import Portfolio from '../Portfolio/Portfolio.jsx';
 
 function Main() {
   return (
-        <>
-            <Promo />
-            <NavTab />
-            <AboutProject />
-            <Techs />
-            <AboutMe />
-            <Portfolio />
-        </>
+    <>
+      <Promo />
+      <NavTab />
+      <AboutProject />
+      <Techs />
+      <AboutMe />
+      <Portfolio />
+    </>
   );
 }
 

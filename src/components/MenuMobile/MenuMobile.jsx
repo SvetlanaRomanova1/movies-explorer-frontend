@@ -9,12 +9,12 @@ function MenuMobile({ setMobileMenuOpen }) {
   };
 
   return (
-        <div className="menu__mobile-container">
-                <button className="menu__mobile-button-close" onClick={handleCloseMenu}>
-                    <CloseIcon />
-                </button>
-                <Navigation setMobileMenuOpen={setMobileMenuOpen} />
-        </div>
+    <div className="menu__mobile-container">
+      <button className="menu__mobile-button-close" onClick={handleCloseMenu}>
+        <CloseIcon />
+      </button>
+      <Navigation setMobileMenuOpen={setMobileMenuOpen} />
+    </div>
   );
 }
 

@@ -1,27 +1,36 @@
-import { useState, useCallback, useContext } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import isEmail from 'validator/es/lib/isEmail';
-import { CurrentUserContext } from '../../constexts/CurrentUserContext';
 
-export default function useFormAndValidation(isSaveToLocalStorage = false) {
-  const currentUser = useContext(CurrentUserContext);
-  const searchFromStorage = localStorage.getItem(currentUser.email);
-  const initialValues = searchFromStorage ? JSON.parse(searchFromStorage) : {};
-  const [values, setValues] = useState(initialValues);
+const noop = () => {};
+const initDefault = {};
+export default function useFormAndValidation(initialValues = initDefault, writeToStorage = noop) {
+  const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [isValid, setIsValid] = useState(false);
+
+  const checkValidity = useCallback(() => {
+    const isFormValid = document.forms[0].checkValidity();
+    setIsValid(isFormValid);
+  }, [setIsValid]);
+
+  useEffect(() => {
+    setValues(initialValues);
+    checkValidity();
+  }, [initialValues]);
 
   const handleChange = (e) => {
     const input = e.target;
     const { value, name, checked } = input;
-    // eslint-disable-next-line
-    const regexPatternName = /[A-Za-zА-Яа-яЁё \-]+$/;
+    const regexPatternName = /^[A-Za-zА-Яа-яЁё\s-]+$/;
 
-    if (name === 'name' && !regexPatternName.test(value)) {
-      input.setCustomValidity('Имя должно содержать только латиницу, кириллицу, пробел или дефис.');
-    } else if (name === 'name' && input.validity.valueMissing) {
-      input.setCustomValidity('Пожалуйста, введите ваше имя.');
-    } else {
-      input.setCustomValidity('');
+    if (name === 'name') {
+      if (name === 'name' && !regexPatternName.test(value)) {
+        input.setCustomValidity('Имя должно содержать только латиницу, кириллицу, пробел или дефис.');
+      } else if (name === 'name' && input.validity.valueMissing) {
+        input.setCustomValidity('Пожалуйста, введите ваше имя.');
+      } else {
+        input.setCustomValidity('');
+      }
     }
 
     if (name === 'email') {
@@ -33,16 +42,14 @@ export default function useFormAndValidation(isSaveToLocalStorage = false) {
         input.setCustomValidity('');
       }
     }
-
+    let result = {};
     setValues((prevValues) => {
-      const result = { ...prevValues, [name]: input.type !== 'checkbox' ? value : checked };
-      if (isSaveToLocalStorage) {
-        localStorage.setItem(currentUser.email, JSON.stringify(result));
-      }
+      result = { ...prevValues, [name]: input.type !== 'checkbox' ? value : checked };
+      writeToStorage(result);
       return result;
     });
     setErrors((prevErrors) => ({ ...prevErrors, [name]: input.validationMessage }));
-    setIsValid(Object.values(values).every((val) => val !== '') && input.closest('form').checkValidity());
+    setIsValid(Object.values(result).every((val) => val !== '') && input.closest('form').checkValidity());
   };
 
   const resetForm = useCallback(
@@ -54,12 +61,14 @@ export default function useFormAndValidation(isSaveToLocalStorage = false) {
     [setValues, setErrors, setIsValid],
   );
 
-  const checkValidity = useCallback(() => {
-    const isFormValid = document.forms[0].checkValidity();
-    setIsValid(isFormValid);
-  }, [setIsValid]);
-
   return {
-    values, errors, isValid, handleChange, resetForm, checkValidity, setIsValid, setValues,
+    values,
+    errors,
+    isValid,
+    handleChange,
+    resetForm,
+    checkValidity,
+    setIsValid,
+    setValues,
   };
 }

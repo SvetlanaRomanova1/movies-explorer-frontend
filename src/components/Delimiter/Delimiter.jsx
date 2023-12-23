@@ -2,7 +2,7 @@ import './Delimiter.css';
 
 function Delimiter() {
   return (
-        <div className="delimiter" />
+    <div className="delimiter" />
   );
 }
 

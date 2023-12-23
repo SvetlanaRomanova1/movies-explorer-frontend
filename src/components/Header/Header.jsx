@@ -23,26 +23,26 @@ function Header() {
   }
 
   return (
-        <header className={`header ${isHomePage ? 'header__pink' : 'header__white'}`}>
-            <div className="header__container">
-                <Link className="header__logo" to="/">
-                    <img src={logoHeader} alt="Логотип"/>
-                </Link>
-                <Navigation
-                    isHeader
-                    isHomePage={isHomePage}
-                    isAuthenticated={currentUser.isAuthenticated}
-                />
-                {currentUser.isAuthenticated && (
-                    <button className="header__menu-mobile-button" onClick={toggleMobileMenu}>
-                        <span className="header__menu-mobile-icon"/>
-                        <span className="header__menu-mobile-icon"/>
-                        <span className="header__menu-mobile-icon"/>
-                    </button>
-                )}
-                {isMobileMenuOpen && <MenuMobile setMobileMenuOpen={setMobileMenuOpen}/>}
-            </div>
-        </header>
+    <header className={`header ${isHomePage ? 'header__pink' : 'header__white'}`}>
+      <div className="header__container">
+        <Link className="header__logo" to="/">
+          <img src={logoHeader} alt="Логотип"/>
+        </Link>
+        <Navigation
+          isHeader
+          isHomePage={isHomePage}
+          isAuthenticated={currentUser.isAuthenticated}
+        />
+        {currentUser.isAuthenticated && (
+          <button className="header__menu-mobile-button" onClick={toggleMobileMenu}>
+            <span className="header__menu-mobile-icon"/>
+            <span className="header__menu-mobile-icon"/>
+            <span className="header__menu-mobile-icon"/>
+          </button>
+        )}
+        {isMobileMenuOpen && <MenuMobile setMobileMenuOpen={setMobileMenuOpen}/>}
+      </div>
+    </header>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchForm from '../SearchForm/SearchForm.jsx';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx';
 
@@ -6,25 +6,27 @@ function Movies(props) {
   const {
     updateMovies,
     isLoading,
-    removeMoviesById,
-    filteredMovies,
     saveIds,
-    setSaveIds,
     savedMovies,
+    onSaveMovie,
+    onDeleteMovie,
   } = props;
+
+  const [filteredMovies, setFilteredMovies] = useState([]);
+  const update = updateMovies(setFilteredMovies);
 
   return (
     <div className="main">
       <SearchForm
-        updateMovies={updateMovies}
+        updateMovies={update}
         savedMovies={savedMovies}
       />
       <MoviesCardList
-        removeMoviesById={removeMoviesById}
         isLoading={isLoading}
         movies={filteredMovies}
         saveIds={saveIds}
-        setSaveIds={setSaveIds}
+        onSaveMovie={onSaveMovie}
+        onDeleteMovie={onDeleteMovie}
       />
     </div>
   );
