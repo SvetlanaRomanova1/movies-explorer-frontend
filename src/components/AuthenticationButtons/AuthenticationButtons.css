@@ -25,6 +25,12 @@
     opacity: 0.5;
 }
 
+.authentication__button_disabled {
+    background-color: #f8f8f8;
+    color: #c2c2c2;
+    cursor: default;
+}
+
 .authentication__description {
     color: #A0A0A0;
     text-align: center;

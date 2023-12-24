@@ -58,6 +58,7 @@
     letter-spacing: -1.2px;
     text-decoration: none;
     list-style: none;
+    display: block;
 }
 
 .portfolio__link-project:after {

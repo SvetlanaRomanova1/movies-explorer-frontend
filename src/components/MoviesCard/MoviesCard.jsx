@@ -1,52 +1,97 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import DeleteIconMovies from '../svg/DeleteIconMovies.jsx';
+import transformDuration from '../../utils/transformDuration';
 import './MoviesCard.css';
-import DeleteIconMovies from "../svg/DeleteIconMovies";
 
-function MoviesCard({id, title, duration, image, isSavedMoviesPage}) {
-    const [isActive, setIsActive] = useState(false);
-    const [moviesCardHovered, setMoviesCardHovered] = useState('')
+function MoviesCard(props) {
+  const {
+    id,
+    duration,
+    url,
+    isSavedMoviesPage,
+    country,
+    director,
+    year,
+    description,
+    trailerLink,
+    thumbnail,
+    nameRU,
+    nameEN,
+    isSaveMovie,
+    movieId,
+    onSaveMovie,
+    onDeleteMovie,
+  } = props;
 
-    const onClick = () => {
-        setIsActive(!isActive);
-    }
+  const data = {
+    id,
+    duration,
+    image: url,
+    country,
+    director,
+    year,
+    description,
+    trailerLink,
+    thumbnail,
+    nameRU,
+    nameEN,
+  };
 
-    const saveCardClass = isActive ? 'movies-card__save' : ''
+  const [moviesCardHovered, setMoviesCardHovered] = useState('');
 
+  const saveCardClass = !isSavedMoviesPage && isSaveMovie ? 'movies-card__save' : '';
 
-    const onMouseOver = (e) => {
-       setMoviesCardHovered('movies-card-hovered');
-    }
+  const onMouseOver = () => {
+    setMoviesCardHovered('movies-card-hovered');
+  };
 
-    const onMouseLeave = (e) => {
-        setMoviesCardHovered('');
-    }
+  const onMouseLeave = () => {
+    setMoviesCardHovered('');
+  };
 
-    return (
-        <div
-            className={`movies-card ${saveCardClass} ${moviesCardHovered}`}
-            onMouseOver={onMouseOver}
-            onMouseLeave={onMouseLeave}
-        >
-            <div className="movies-card__image" style={{backgroundImage: `url(${image})`}}/>
-            {!isSavedMoviesPage && <button
-                onClick={onClick}
-                className={`movies-card__button-action`}
-            >
+  const handleDeleteMovie = (e) => {
+    e.preventDefault();
+    onDeleteMovie(movieId, id);
+  };
+
+  const handleSaveMovies = (e) => {
+    e.preventDefault();
+    onSaveMovie(data);
+  };
+
+  return (
+    <div
+      className={`movies-card ${saveCardClass} ${moviesCardHovered}`}
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
+      <div className="movies-card__image-wrap">
+        <a target="_blank" rel="noreferrer" href={trailerLink}>
+          <div className="movies-card__image" style={{ backgroundImage: `url(${url})` }}/>
+        </a>
+      </div>
+      {!isSavedMoviesPage && <button
+        onClick={(e) => {
+          // eslint-disable-next-line no-unused-expressions
+          isSaveMovie ? handleDeleteMovie(e) : handleSaveMovies(e);
+        }}
+        className={'movies-card__button-action'}
+      >
                 Сохранить
-            </button>}
-            {isSavedMoviesPage && (
-                <button
-                    className={`movies-card__button-action movies-card__button-color movies-card__button-delete`}>
-                    <DeleteIconMovies/>
-                </button>
-            )}
-            <div className="movies-card__context">
-                <p className="movies-card__title">{title}</p>
-                <span className="movies-card__duration">{duration}</span>
-            </div>
-
-        </div>
-    );
+      </button>}
+      {isSavedMoviesPage && (
+        <button
+          onClick={handleDeleteMovie}
+          className={'movies-card__button-action movies-card__button-color movies-card__button-delete'}>
+          <DeleteIconMovies/>
+        </button>
+      )}
+      <div className="movies-card__context">
+        <p className="movies-card__title">{nameRU || nameEN}</p>
+        <span className="movies-card__duration">{transformDuration(duration)}</span>
+      </div>
+    </div>
+  );
 }
 
 export default MoviesCard;

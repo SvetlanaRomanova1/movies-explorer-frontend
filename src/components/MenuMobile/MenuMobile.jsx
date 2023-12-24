@@ -1,22 +1,21 @@
 import './MenuMobile.css';
-import Navigation from "../Navigation/Navigation";
-import React from "react";
-import CloseIcon from "../svg/CloseIcon";
+import React from 'react';
+import Navigation from '../Navigation/Navigation.jsx';
+import CloseIcon from '../svg/CloseIcon.jsx';
 
-function MenuMobile({setMobileMenuOpen}) {
+function MenuMobile({ setMobileMenuOpen }) {
+  const handleCloseMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
-    const handleCloseMenu = () => {
-        setMobileMenuOpen(false)
-    }
-
-    return (
-        <div className="menu__mobile-container">
-                <button className="menu__mobile-button-close" onClick={handleCloseMenu}>
-                    <CloseIcon />
-                </button>
-                <Navigation setMobileMenuOpen={setMobileMenuOpen} isAuthenticated={true}/>
-        </div>
-    )
+  return (
+    <div className="menu__mobile-container">
+      <button className="menu__mobile-button-close" onClick={handleCloseMenu}>
+        <CloseIcon />
+      </button>
+      <Navigation setMobileMenuOpen={setMobileMenuOpen} />
+    </div>
+  );
 }
 
 export default MenuMobile;
